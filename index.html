@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ever Growth Leaders - Calculadora de ROI</title>
-    <!-- Tailwind CSS -->
+    <title>Ever Growth Leaders - Calculadora Comercial</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Deshabilitar flechas en inputs numéricos */
         input[type="number"]::-webkit-inner-spin-button,
         input[type="number"]::-webkit-outer-spin-button {
             -webkit-appearance: none;
@@ -16,381 +14,296 @@
         input[type="number"] {
             -moz-appearance: textfield;
         }
+        .glow-green { box-shadow: 0 0 20px rgba(34,197,94,0.2); }
+        .glow-yellow { box-shadow: 0 0 20px rgba(234,179,8,0.2); }
+        .glow-red { box-shadow: 0 0 20px rgba(239,68,68,0.2); }
     </style>
 </head>
 <body class="bg-[#0d0b35] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1f1654] via-[#0d0b35] to-[#07051c] text-slate-100 font-sans min-h-screen flex items-center justify-center p-4">
 
-    <div class="max-w-4xl w-full flex flex-col items-center">
+    <div class="max-w-5xl w-full flex flex-col items-center">
         
-        <!-- Logo de Marca (EverGrowth Leaders Centrado) -->
-        <div class="mb-8 flex justify-center w-full">
+        <!-- Logo -->
+        <div class="mb-6 flex justify-center w-full">
             <svg class="h-20 md:h-24 w-auto drop-shadow-[0_4px_15px_rgba(230,7,104,0.15)]" viewBox="0 0 305.2 91.7" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px" style="enable-background:new 0 0 305.2 91.7;" xml:space="preserve">
                 <style type="text/css">
                     .st0{fill:url(#SVGID_1_);}
-                    .st1{fill:url(#SVGID_00000098196299763620895920000007134258467648405123_);}
-                    .st2{fill:url(#SVGID_00000049214310116663169310000016602760861975886012_);}
-                    .st3{fill:url(#SVGID_00000116943551327940329430000009759442038227579068_);}
-                    .st4{fill:url(#SVGID_00000178913279613648059400000010327694542933401495_);}
-                    .st5{fill:url(#SVGID_00000100363754596098834840000016325896212792686261_);}
-                    .st6{fill:url(#SVGID_00000013173554601080020440000001029054100611687356_);}
-                    .st7{fill:url(#SVGID_00000096026889142340279080000007460054979150109343_);}
-                    .st8{fill:url(#SVGID_00000031174579829305003090000008395801828592467899_);}
-                    .st9{fill:url(#SVGID_00000043455926162142544370000011355347645092764841_);}
-                    .st10{fill:url(#SVGID_00000053543508728595094230000006055830745621571737_);}
-                    .st11{fill:url(#SVGID_00000052784259272110684680000004885407460554612648_);}
-                    .st12{fill:url(#SVGID_00000041286066334699086660000003506692036276275105_);}
-                    .st13{fill:url(#SVGID_00000095301560768543306140000008847414864817769103_);}
-                    .st14{fill:url(#SVGID_00000064333141274103822700000014974758509048804508_);}
-                    .st15{fill:url(#SVGID_00000075875051723820215920000000938235535353475498_);}
-                    .st16{fill:url(#SVGID_00000159455144435777541990000008873151344554065555_);}
                 </style>
-                <g>
-                    <g>
-                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="513.69" x2="305.168" y2="513.69" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                            <stop offset="0" style="stop-color:#0087B1"></stop>
-                            <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                            <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                            <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                            <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                            <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                            <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                            <stop offset="1" style="stop-color:#E60768"></stop>
+                <g><g>
+                    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="513.69" x2="305.168" y2="513.69" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                        <stop offset="0" style="stop-color:#0087B1"></stop>
+                        <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
+                        <stop offset="0.271" style="stop-color:#5B5594"></stop>
+                        <stop offset="0.4486" style="stop-color:#8C3984"></stop>
+                        <stop offset="0.6147" style="stop-color:#B32378"></stop>
+                        <stop offset="0.7668" style="stop-color:#CF146F"></stop>
+                        <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
+                        <stop offset="1" style="stop-color:#E60768"></stop>
+                    </linearGradient>
+                    <path class="st0" d="M9.1,27.6h17.2v7.2H0v-7.2 M0,9.2V2h25.8v7.2H9.2 M3.6,14.7h11.6l-4,6.9H0v-6.9h9.2"></path>
+                    <linearGradient id="g2" gradientUnits="userSpaceOnUse" x1="-0.025" y1="509.94" x2="305.14" y2="509.94" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                        <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
+                    </linearGradient>
+                    <path style="fill:url(#g2);" d="M38.1,34.9L27.6,9.4h9.2l8.4,21.4h-4.6 l8.8-21.4h8.5L47.5,34.9H38.1z"></path>
+                    <linearGradient id="g3" gradientUnits="userSpaceOnUse" x1="-0.025" y1="509.94" x2="305.14" y2="509.94" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                        <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
+                    </linearGradient>
+                    <path style="fill:url(#g3);" d="M72.8,35.3c-3,0-5.7-0.6-7.9-1.7 c-2.2-1.1-4-2.7-5.2-4.7s-1.9-4.2-1.9-6.7c0-2.6,0.6-4.8,1.8-6.8s2.9-3.5,5-4.7C66.7,9.6,69.1,9,71.8,9c2.5,0,4.8,0.5,6.8,1.6 c2.1,1.1,3.7,2.6,4.9,4.5c1.2,2,1.9,4.3,1.9,7.2c0,0.3,0,0.7,0,1.1c0,0.4-0.1,0.8-0.1,1.1H65.1v-4.7h15.4l-3.4,1.3 c0-1.1-0.2-2.1-0.6-3c-0.5-0.9-1.1-1.5-1.9-2c-0.8-0.5-1.7-0.7-2.8-0.7s-2.1,0.2-2.9,0.7c-0.8,0.5-1.4,1.1-1.9,2 c-0.4,0.9-0.6,1.9-0.6,3v1.4c0,1.3,0.3,2.3,0.8,3.2s1.3,1.6,2.2,2.1c1,0.5,2.1,0.7,3.5,0.7c1.3,0,2.4-0.2,3.2-0.5 c0.9-0.4,1.8-0.9,2.6-1.7l4.7,4.9c-1.2,1.3-2.7,2.3-4.5,3C77.3,34.9,75.2,35.3,72.8,35.3z"></path>
+                    <linearGradient id="g4" gradientUnits="userSpaceOnUse" x1="-0.025" y1="510.09" x2="305.14" y2="510.09" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                        <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
+                    </linearGradient>
+                    <path style="fill:url(#g4);" d="M89.6,34.9V9.4h8.6v7.5l-1.3-2.1 c0.8-1.9,2-3.4,3.7-4.3c1.7-1,3.7-1.5,6.1-1.5v8.1c-0.4-0.1-0.8-0.1-1.1-0.1s-0.6,0-0.9,0c-1.8,0-3.3,0.5-4.4,1.5 c-1.1,1-1.7,2.6-1.7,4.8V35L89.6,34.9L89.6,34.9z"></path>
+                    <linearGradient id="g5" gradientUnits="userSpaceOnUse" x1="-0.025" y1="513.59" x2="305.14" y2="513.59" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                        <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
+                    </linearGradient>
+                    <path style="fill:url(#g5);" d="M141,35.5c-2.6,0-5-0.4-7.2-1.2 s-4.1-2-5.7-3.5c-1.6-1.5-2.9-3.3-3.8-5.4c-0.9-2.1-1.4-4.4-1.4-6.9s0.5-4.8,1.4-6.9c0.9-2.1,2.2-3.9,3.8-5.4s3.6-2.7,5.8-3.5 s4.7-1.2,7.4-1.2c3.1,0,5.8,0.5,8.3,1.6c2.4,1,4.5,2.5,6.1,4.5l-5.9,5.4c-1.1-1.3-2.3-2.2-3.6-2.8s-2.7-0.9-4.3-0.9 c-1.4,0-2.7,0.2-3.9,0.7c-1.2,0.4-2.1,1.1-3,1.9c-0.8,0.8-1.4,1.8-1.9,3s-0.7,2.4-0.7,3.9c0,1.4,0.2,2.6,0.7,3.8s1.1,2.2,1.9,3 c0.8,0.8,1.8,1.5,2.9,1.9c1.1,0.5,2.4,0.7,3.8,0.7c1.4,0,2.7-0.2,4-0.7s2.6-1.2,4-2.3l5.2,6.5c-1.9,1.3-4.1,2.4-6.6,3.1 C145.8,35.1,143.4,35.5,141,35.5z M146.5,30.2V17.7h8.3v13.6L146.5,30.2z"></path>
+                    <linearGradient id="g6" gradientUnits="userSpaceOnUse" x1="-0.025" y1="510.09" x2="305.14" y2="510.09" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                        <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
+                    </linearGradient>
+                    <path style="fill:url(#g6);" d="M160.3,34.9V9.4h8.6v7.5l-1.3-2.1 c0.8-1.9,2-3.4,3.7-4.3c1.7-1,3.7-1.5,6.1-1.5v8.1c-0.4-0.1-0.8-0.1-1.1-0.1c-0.3,0-0.6,0-0.9,0c-1.8,0-3.3,0.5-4.4,1.5 s-1.7,2.6-1.7,4.8V35L160.3,34.9L160.3,34.9z"></path>
+                    <linearGradient id="g7" gradientUnits="userSpaceOnUse" x1="-0.025" y1="509.99" x2="305.14" y2="509.99" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                        <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
+                    </linearGradient>
+                    <path style="fill:url(#g7);" d="M193.6,35.3c-2.8,0-5.3-0.6-7.4-1.7 s-3.9-2.7-5.1-4.7s-1.9-4.3-1.9-6.8c0-2.6,0.6-4.8,1.9-6.8c1.2-2,2.9-3.5,5.1-4.7s4.6-1.7,7.4-1.7s5.3,0.6,7.4,1.7 c2.2,1.1,3.9,2.7,5.1,4.7s1.9,4.3,1.9,6.8s-0.6,4.8-1.9,6.8c-1.2,2-2.9,3.5-5.1,4.7C198.8,34.7,196.4,35.3,193.6,35.3z M193.6,28.2c1,0,1.9-0.2,2.7-0.7c0.8-0.5,1.4-1.2,1.9-2.1c0.5-0.9,0.7-2,0.7-3.3s-0.2-2.4-0.7-3.3c-0.5-0.9-1.1-1.6-1.9-2 c-0.8-0.5-1.7-0.7-2.7-0.7s-1.9,0.2-2.7,0.7c-0.8,0.5-1.4,1.1-1.9,2s-0.7,2-0.7,3.3s0.2,2.4,0.7,3.3c0.5,0.9,1.1,1.6,1.9,2.1 C191.7,27.9,192.6,28.2,193.6,28.2z"></path>
+                    <linearGradient id="g8" gradientUnits="userSpaceOnUse" x1="-0.025" y1="509.94" x2="305.14" y2="509.94" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                        <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
+                    </linearGradient>
+                    <path style="fill:url(#g8);" d="M217.4,34.9l-9-25.5h8.4l7.2,21.4h-4.1 l7.6-21.4h7.6l7.2,21.4h-4l7.4-21.4h7.8l-9.1,25.5h-8.6l-6.1-17.6h2.6L226,34.9H217.4z"></path>
+                    <linearGradient id="g9" gradientUnits="userSpaceOnUse" x1="-0.025" y1="512.59" x2="305.14" y2="512.59" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                        <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
+                    </linearGradient>
+                    <path style="fill:url(#g9);" d="M254.3,17v-6.7h18.5V17H254.3z M268.4,35.3c-3.3,0-5.8-0.8-7.6-2.4c-1.8-1.6-2.7-4-2.7-7.3V3.7h8.9v21.8c0,1,0.2,1.7,0.7,2.2s1.1,0.8,2,0.8c1,0,1.9-0.3,2.7-0.8 l2.3,6.2c-0.8,0.5-1.8,0.9-2.8,1.2C270.7,35.2,269.6,35.3,268.4,35.3z"></path>
+                    <linearGradient id="g10" gradientUnits="userSpaceOnUse" x1="-0.025" y1="514.64" x2="305.14" y2="514.64" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                        <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
+                    </linearGradient>
+                    <path style="fill:url(#g10);" d="M294.6,8.9c2,0,3.8,0.4,5.4,1.2 s2.9,2.1,3.8,3.7c0.9,1.7,1.4,3.8,1.4,6.4v14.6h-9V21.7c0-1.8-0.4-3.1-1.1-4c-0.7-0.8-1.7-1.2-3-1.2c-1,0-1.8,0.2-2.6,0.6 c-0.8,0.4-1.4,1.1-1.8,2s-0.7,2-0.7,3.5v12.3h-9V0h8.9v16.6l-2.1-2.1c1-1.8,2.3-3.2,4-4.2C290.6,9.4,292.5,8.9,294.6,8.9z"></path>
+                    <!-- LEADERS -->
+                    <g transform="translate(55 0)">
+                        <linearGradient id="gL1" gradientUnits="userSpaceOnUse" x1="-0.025" y1="457.24" x2="305.14" y2="457.24" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                            <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
                         </linearGradient>
-                        <path class="st0" d="M9.1,27.6h17.2v7.2H0v-7.2 M0,9.2V2h25.8v7.2H9.2 M3.6,14.7h11.6l-4,6.9H0v-6.9h9.2"></path>
-                        <linearGradient id="SVGID_00000013174022960042628620000014726880504416074882_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="509.94" x2="305.1426" y2="509.94" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                            <stop offset="0" style="stop-color:#0087B1"></stop>
-                            <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                            <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                            <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                            <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                            <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                            <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                            <stop offset="1" style="stop-color:#E60768"></stop>
+                        <path style="fill:url(#gL1);" d="M0,91.3V58.4h9.3v25.5H25v7.4L0,91.3 L0,91.3z"></path>
+                        <linearGradient id="gL2" gradientUnits="userSpaceOnUse" x1="-0.025" y1="453.54" x2="305.14" y2="453.54" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                            <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
                         </linearGradient>
-                        <path style="fill:url(#SVGID_00000013174022960042628620000014726880504416074882_);" d="M38.1,34.9L27.6,9.4h9.2l8.4,21.4h-4.6 l8.8-21.4h8.5L47.5,34.9H38.1z"></path>
-                        <linearGradient id="SVGID_00000090272357724138479890000017390527091009251246_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="509.94" x2="305.1426" y2="509.94" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                            <stop offset="0" style="stop-color:#0087B1"></stop>
-                            <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                            <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                            <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                            <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                            <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                            <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                            <stop offset="1" style="stop-color:#E60768"></stop>
+                        <path style="fill:url(#gL2);" d="M41.5,91.7c-3,0-5.7-0.6-7.9-1.7 c-2.2-1.1-4-2.7-5.2-4.7s-1.9-4.2-1.9-6.7c0-2.6,0.6-4.8,1.8-6.8c1.2-2,2.9-3.5,5-4.7c2.1-1.1,4.5-1.7,7.2-1.7 c2.5,0,4.8,0.5,6.8,1.6c2.1,1.1,3.7,2.6,4.9,4.5c1.2,2,1.9,4.3,1.9,7.2c0,0.3,0,0.7,0,1.1c0,0.4-0.1,0.8-0.1,1.1H33.8v-4.8h15.4 l-3.4,1.3c0-1.1-0.2-2.1-0.6-3c-0.5-0.9-1.1-1.5-1.9-2c-0.8-0.5-1.7-0.7-2.8-0.7s-2.1,0.2-2.9,0.7c-0.8,0.5-1.4,1.1-1.9,2 c-0.4,0.9-0.6,1.9-0.6,3v1.4c0,1.3,0.3,2.3,0.8,3.2s1.3,1.6,2.2,2.1c1,0.5,2.1,0.7,3.5,0.7c1.3,0,2.4-0.2,3.2-0.5 c0.9-0.4,1.8-0.9,2.6-1.7l4.7,4.9c-1.2,1.3-2.7,2.3-4.5,3C46,91.3,43.9,91.7,41.5,91.7z"></path>
+                        <linearGradient id="gL3" gradientUnits="userSpaceOnUse" x1="-0.025" y1="453.54" x2="305.14" y2="453.54" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                            <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
                         </linearGradient>
-                        <path style="fill:url(#SVGID_00000090272357724138479890000017390527091009251246_);" d="M72.8,35.3c-3,0-5.7-0.6-7.9-1.7 c-2.2-1.1-4-2.7-5.2-4.7s-1.9-4.2-1.9-6.7c0-2.6,0.6-4.8,1.8-6.8s2.9-3.5,5-4.7C66.7,9.6,69.1,9,71.8,9c2.5,0,4.8,0.5,6.8,1.6 c2.1,1.1,3.7,2.6,4.9,4.5c1.2,2,1.9,4.3,1.9,7.2c0,0.3,0,0.7,0,1.1c0,0.4-0.1,0.8-0.1,1.1H65.1v-4.7h15.4l-3.4,1.3 c0-1.1-0.2-2.1-0.6-3c-0.5-0.9-1.1-1.5-1.9-2c-0.8-0.5-1.7-0.7-2.8-0.7s-2.1,0.2-2.9,0.7c-0.8,0.5-1.4,1.1-1.9,2 c-0.4,0.9-0.6,1.9-0.6,3v1.4c0,1.3,0.3,2.3,0.8,3.2s1.3,1.6,2.2,2.1c1,0.5,2.1,0.7,3.5,0.7c1.3,0,2.4-0.2,3.2-0.5 c0.9-0.4,1.8-0.9,2.6-1.7l4.7,4.9c-1.2,1.3-2.7,2.3-4.5,3C77.3,34.9,75.2,35.3,72.8,35.3z"></path>
-                        <linearGradient id="SVGID_00000095322927488487978620000011544500420012517555_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="510.09" x2="305.1426" y2="510.09" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                            <stop offset="0" style="stop-color:#0087B1"></stop>
-                            <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                            <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                            <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                            <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                            <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                            <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                            <stop offset="1" style="stop-color:#E60768"></stop>
+                        <path style="fill:url(#gL3);" d="M65.6,91.7c-2,0-3.7-0.3-5.1-1 c-1.4-0.7-2.5-1.6-3.2-2.8s-1.1-2.5-1.1-3.9c0-1.6,0.4-2.9,1.2-4.1c0.8-1.2,2-2,3.7-2.7s3.8-0.9,6.4-0.9h6V81h-4.8 c-1.4,0-2.5,0.2-3,0.7c-0.6,0.4-0.9,1.1-0.9,1.9c0,0.8,0.3,1.4,0.9,1.9c0.6,0.5,1.4,0.7,2.4,0.7s1.9-0.2,2.7-0.7s1.4-1.2,1.7-2.2 l1.2,3.3c-0.5,1.8-1.4,3.1-2.7,4C69.6,91.2,67.8,91.7,65.6,91.7z M73.1,91.3v-4.7l-0.6-1.2v-8.7c0-1.4-0.4-2.5-1.3-3.3 c-0.9-0.8-2.2-1.2-4.1-1.2c-1.2,0-2.5,0.2-3.7,0.6c-1.3,0.4-2.3,0.9-3.2,1.6l-3-6c1.4-0.9,3.2-1.7,5.2-2.2s4-0.8,6-0.8 c4.1,0,7.3,1,9.6,2.9s3.4,4.9,3.4,8.9v14.1L73.1,91.3L73.1,91.3z"></path>
+                        <linearGradient id="gL4" gradientUnits="userSpaceOnUse" x1="-0.025" y1="458.04" x2="305.14" y2="458.04" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                            <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
                         </linearGradient>
-                        <path style="fill:url(#SVGID_00000095322927488487978620000011544500420012517555_);" d="M89.6,34.9V9.4h8.6v7.5l-1.3-2.1 c0.8-1.9,2-3.4,3.7-4.3c1.7-1,3.7-1.5,6.1-1.5v8.1c-0.4-0.1-0.8-0.1-1.1-0.1s-0.6,0-0.9,0c-1.8,0-3.3,0.5-4.4,1.5 c-1.1,1-1.7,2.6-1.7,4.8V35L89.6,34.9L89.6,34.9z"></path>
-                        <linearGradient id="SVGID_00000021088628961561657030000015017556279594549893_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="513.59" x2="305.1426" y2="513.59" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                            <stop offset="0" style="stop-color:#0087B1"></stop>
-                            <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                            <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                            <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                            <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                            <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                            <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                            <stop offset="1" style="stop-color:#E60768"></stop>
+                        <path style="fill:url(#gL4);" d="M98.5,91.7c-2.3,0-4.4-0.5-6.3-1.6 c-1.9-1.1-3.4-2.6-4.5-4.6s-1.7-4.3-1.7-7s0.6-5.1,1.7-7c1.1-2,2.6-3.5,4.5-4.6s4-1.6,6.3-1.6c2.2,0,4,0.5,5.5,1.4 c1.5,1,2.7,2.4,3.5,4.3c0.8,1.9,1.2,4.4,1.2,7.4s-0.4,5.5-1.1,7.4c-0.7,1.9-1.9,3.4-3.4,4.3C102.7,91.2,100.8,91.7,98.5,91.7z M100.4,84.6c1,0,1.9-0.2,2.7-0.7s1.4-1.2,1.9-2.1c0.5-0.9,0.7-2,0.7-3.3s-0.2-2.5-0.7-3.3c-0.5-0.9-1.1-1.6-1.9-2 c-0.8-0.5-1.7-0.7-2.7-0.7s-2,0.2-2.7,0.7c-0.8,0.5-1.4,1.1-1.9,2s-0.7,2-0.7,3.3s0.2,2.3,0.7,3.3c0.5,0.9,1.1,1.6,1.9,2.1 C98.4,84.3,99.3,84.6,100.4,84.6z M106,91.3v-4.4v-8.4l-0.5-8.4V56.4h8.9v34.9L106,91.3L106,91.3z"></path>
+                        <linearGradient id="gL5" gradientUnits="userSpaceOnUse" x1="-0.025" y1="453.54" x2="305.14" y2="453.54" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                            <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
                         </linearGradient>
-                        <path style="fill:url(#SVGID_00000021088628961561657030000015017556279594549893_);" d="M141,35.5c-2.6,0-5-0.4-7.2-1.2 s-4.1-2-5.7-3.5c-1.6-1.5-2.9-3.3-3.8-5.4c-0.9-2.1-1.4-4.4-1.4-6.9s0.5-4.8,1.4-6.9c0.9-2.1,2.2-3.9,3.8-5.4s3.6-2.7,5.8-3.5 s4.7-1.2,7.4-1.2c3.1,0,5.8,0.5,8.3,1.6c2.4,1,4.5,2.5,6.1,4.5l-5.9,5.4c-1.1-1.3-2.3-2.2-3.6-2.8s-2.7-0.9-4.3-0.9 c-1.4,0-2.7,0.2-3.9,0.7c-1.2,0.4-2.1,1.1-3,1.9c-0.8,0.8-1.4,1.8-1.9,3s-0.7,2.4-0.7,3.9c0,1.4,0.2,2.6,0.7,3.8s1.1,2.2,1.9,3 c0.8,0.8,1.8,1.5,2.9,1.9c1.1,0.5,2.4,0.7,3.8,0.7c1.4,0,2.7-0.2,4-0.7s2.6-1.2,4-2.3l5.2,6.5c-1.9,1.3-4.1,2.4-6.6,3.1 C145.8,35.1,143.4,35.5,141,35.5z M146.5,30.2V17.7h8.3v13.6L146.5,30.2z"></path>
-                        <linearGradient id="SVGID_00000074438509879453636610000011306926559918609844_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="510.09" x2="305.1426" y2="510.09" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                            <stop offset="0" style="stop-color:#0087B1"></stop>
-                            <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                            <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                            <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                            <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                            <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                            <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                            <stop offset="1" style="stop-color:#E60768"></stop>
+                        <path style="fill:url(#gL5);" d="M133.6,91.7c-3,0-5.7-0.6-7.9-1.7 c-2.2-1.1-4-2.7-5.2-4.7s-1.9-4.2-1.9-6.7c0-2.6,0.6-4.8,1.8-6.8s2.9-3.5,5-4.7c2.1-1.1,4.5-1.7,7.2-1.7c2.5,0,4.8,0.5,6.8,1.6 c2.1,1.1,3.7,2.6,4.9,4.5c1.2,2,1.9,4.3,1.9,7.2c0,0.3,0,0.7,0,1.1c0,0.4-0.1,0.8-0.1,1.1h-20.2v-4.8h15.4l-3.4,1.3 c0-1.1-0.2-2.1-0.6-3c-0.5-0.9-1.1-1.5-1.9-2c-0.8-0.5-1.7-0.7-2.8-0.7s-2.1,0.2-2.9,0.7c-0.8,0.5-1.4,1.1-1.9,2 c-0.4,0.9-0.6,1.9-0.6,3v1.4c0,1.3,0.3,2.3,0.8,3.2s1.3,1.6,2.2,2.1c1,0.5,2.1,0.7,3.5,0.7c1.3,0,2.4-0.2,3.2-0.5 c0.9-0.4,1.8-0.9,2.6-1.7l4.7,4.9c-1.2,1.3-2.7,2.3-4.5,3C138.1,91.3,136,91.7,133.6,91.7z"></path>
+                        <linearGradient id="gL6" gradientUnits="userSpaceOnUse" x1="-0.025" y1="453.69" x2="305.14" y2="453.69" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                            <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
                         </linearGradient>
-                        <path style="fill:url(#SVGID_00000074438509879453636610000011306926559918609844_);" d="M160.3,34.9V9.4h8.6v7.5l-1.3-2.1 c0.8-1.9,2-3.4,3.7-4.3c1.7-1,3.7-1.5,6.1-1.5v8.1c-0.4-0.1-0.8-0.1-1.1-0.1c-0.3,0-0.6,0-0.9,0c-1.8,0-3.3,0.5-4.4,1.5 s-1.7,2.6-1.7,4.8V35L160.3,34.9L160.3,34.9z"></path>
-                        <linearGradient id="SVGID_00000029038375825014015820000011567413652301387392_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="509.99" x2="305.1426" y2="509.99" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                            <stop offset="0" style="stop-color:#0087B1"></stop>
-                            <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                            <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                            <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                            <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                            <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                            <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                            <stop offset="1" style="stop-color:#E60768"></stop>
+                        <path style="fill:url(#gL6);" d="M150.4,91.3V65.8h8.6v7.5l-1.3-2.1 c0.8-1.9,2-3.4,3.7-4.3c1.7-1,3.7-1.5,6.1-1.5v8.1c-0.4-0.1-0.8-0.1-1.1-0.1c-0.3,0-0.6,0-0.9,0c-1.8,0-3.3,0.5-4.4,1.5 c-1.1,1-1.7,2.6-1.7,4.8v11.7L150.4,91.3L150.4,91.3z"></path>
+                        <linearGradient id="gL7" gradientUnits="userSpaceOnUse" x1="-0.025" y1="453.54" x2="305.14" y2="453.54" gradientTransform="matrix(1 0 0 -1 0 532.09)">
+                            <stop offset="0" style="stop-color:#0087B1"></stop><stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop><stop offset="0.271" style="stop-color:#5B5594"></stop><stop offset="0.4486" style="stop-color:#8C3984"></stop><stop offset="0.6147" style="stop-color:#B32378"></stop><stop offset="0.7668" style="stop-color:#CF146F"></stop><stop offset="0.9001" style="stop-color:#E00A6A"></stop><stop offset="1" style="stop-color:#E60768"></stop>
                         </linearGradient>
-                        <path style="fill:url(#SVGID_00000029038375825014015820000011567413652301387392_);" d="M193.6,35.3c-2.8,0-5.3-0.6-7.4-1.7 s-3.9-2.7-5.1-4.7s-1.9-4.3-1.9-6.8c0-2.6,0.6-4.8,1.9-6.8c1.2-2,2.9-3.5,5.1-4.7s4.6-1.7,7.4-1.7s5.3,0.6,7.4,1.7 c2.2,1.1,3.9,2.7,5.1,4.7s1.9,4.3,1.9,6.8s-0.6,4.8-1.9,6.8c-1.2,2-2.9,3.5-5.1,4.7C198.8,34.7,196.4,35.3,193.6,35.3z M193.6,28.2c1,0,1.9-0.2,2.7-0.7c0.8-0.5,1.4-1.2,1.9-2.1c0.5-0.9,0.7-2,0.7-3.3s-0.2-2.4-0.7-3.3c-0.5-0.9-1.1-1.6-1.9-2 c-0.8-0.5-1.7-0.7-2.7-0.7s-1.9,0.2-2.7,0.7c-0.8,0.5-1.4,1.1-1.9,2s-0.7,2-0.7,3.3s0.2,2.4,0.7,3.3c0.5,0.9,1.1,1.6,1.9,2.1 C191.7,27.9,192.6,28.2,193.6,28.2z"></path>
-                        <linearGradient id="SVGID_00000059989760468345664470000000295795720879254169_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="509.94" x2="305.1426" y2="509.94" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                            <stop offset="0" style="stop-color:#0087B1"></stop>
-                            <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                            <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                            <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                            <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                            <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                            <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                            <stop offset="1" style="stop-color:#E60768"></stop>
-                        </linearGradient>
-                        <path style="fill:url(#SVGID_00000059989760468345664470000000295795720879254169_);" d="M217.4,34.9l-9-25.5h8.4l7.2,21.4h-4.1 l7.6-21.4h7.6l7.2,21.4h-4l7.4-21.4h7.8l-9.1,25.5h-8.6l-6.1-17.6h2.6L226,34.9H217.4z"></path>
-                        <linearGradient id="SVGID_00000053511822178430373680000005227732862190086280_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="512.59" x2="305.1426" y2="512.59" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                            <stop offset="0" style="stop-color:#0087B1"></stop>
-                            <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                            <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                            <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                            <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                            <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                            <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                            <stop offset="1" style="stop-color:#E60768"></stop>
-                        </linearGradient>
-                        <path style="fill:url(#SVGID_00000053511822178430373680000005227732862190086280_);" d="M254.3,17v-6.7h18.5V17H254.3z M268.4,35.3c-3.3,0-5.8-0.8-7.6-2.4c-1.8-1.6-2.7-4-2.7-7.3V3.7h8.9v21.8c0,1,0.2,1.7,0.7,2.2s1.1,0.8,2,0.8c1,0,1.9-0.3,2.7-0.8 l2.3,6.2c-0.8,0.5-1.8,0.9-2.8,1.2C270.7,35.2,269.6,35.3,268.4,35.3z"></path>
-                        <linearGradient id="SVGID_00000005229440931470067120000014076971521821116588_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="514.64" x2="305.1426" y2="514.64" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                            <stop offset="0" style="stop-color:#0087B1"></stop>
-                            <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                            <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                            <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                            <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                            <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                            <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                            <stop offset="1" style="stop-color:#E60768"></stop>
-                        </linearGradient>
-                        <path style="fill:url(#SVGID_00000005229440931470067120000014076971521821116588_);" d="M294.6,8.9c2,0,3.8,0.4,5.4,1.2 s2.9,2.1,3.8,3.7c0.9,1.7,1.4,3.8,1.4,6.4v14.6h-9V21.7c0-1.8-0.4-3.1-1.1-4c-0.7-0.8-1.7-1.2-3-1.2c-1,0-1.8,0.2-2.6,0.6 c-0.8,0.4-1.4,1.1-1.8,2s-0.7,2-0.7,3.5v12.3h-9V0h8.9v16.6l-2.1-2.1c1-1.8,2.3-3.2,4-4.2C290.6,9.4,292.5,8.9,294.6,8.9z"></path>
-                        <!-- LEADERS — centrado bajo EVERGROWTH con translate(55,0) -->
-                        <g transform="translate(55 0)">
-                            <linearGradient id="SVGID_00000096746712629716976520000009043682804856611969_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="457.24" x2="305.1426" y2="457.24" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                                <stop offset="0" style="stop-color:#0087B1"></stop>
-                                <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                                <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                                <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                                <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                                <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                                <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                                <stop offset="1" style="stop-color:#E60768"></stop>
-                            </linearGradient>
-                            <path style="fill:url(#SVGID_00000096746712629716976520000009043682804856611969_);" d="M0,91.3V58.4h9.3v25.5H25v7.4L0,91.3 L0,91.3z"></path>
-                            <linearGradient id="SVGID_00000065776952493978047420000013296675461029969588_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="453.54" x2="305.1426" y2="453.54" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                                <stop offset="0" style="stop-color:#0087B1"></stop>
-                                <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                                <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                                <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                                <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                                <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                                <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                                <stop offset="1" style="stop-color:#E60768"></stop>
-                            </linearGradient>
-                            <path style="fill:url(#SVGID_00000065776952493978047420000013296675461029969588_);" d="M41.5,91.7c-3,0-5.7-0.6-7.9-1.7 c-2.2-1.1-4-2.7-5.2-4.7s-1.9-4.2-1.9-6.7c0-2.6,0.6-4.8,1.8-6.8c1.2-2,2.9-3.5,5-4.7c2.1-1.1,4.5-1.7,7.2-1.7 c2.5,0,4.8,0.5,6.8,1.6c2.1,1.1,3.7,2.6,4.9,4.5c1.2,2,1.9,4.3,1.9,7.2c0,0.3,0,0.7,0,1.1c0,0.4-0.1,0.8-0.1,1.1H33.8v-4.8h15.4 l-3.4,1.3c0-1.1-0.2-2.1-0.6-3c-0.5-0.9-1.1-1.5-1.9-2c-0.8-0.5-1.7-0.7-2.8-0.7s-2.1,0.2-2.9,0.7c-0.8,0.5-1.4,1.1-1.9,2 c-0.4,0.9-0.6,1.9-0.6,3v1.4c0,1.3,0.3,2.3,0.8,3.2s1.3,1.6,2.2,2.1c1,0.5,2.1,0.7,3.5,0.7c1.3,0,2.4-0.2,3.2-0.5 c0.9-0.4,1.8-0.9,2.6-1.7l4.7,4.9c-1.2,1.3-2.7,2.3-4.5,3C46,91.3,43.9,91.7,41.5,91.7z"></path>
-                            <linearGradient id="SVGID_00000107552966766521262420000006221665652415846833_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="453.54" x2="305.1426" y2="453.54" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                                <stop offset="0" style="stop-color:#0087B1"></stop>
-                                <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                                <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                                <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                                <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                                <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                                <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                                <stop offset="1" style="stop-color:#E60768"></stop>
-                            </linearGradient>
-                            <path style="fill:url(#SVGID_00000107552966766521262420000006221665652415846833_);" d="M65.6,91.7c-2,0-3.7-0.3-5.1-1 c-1.4-0.7-2.5-1.6-3.2-2.8s-1.1-2.5-1.1-3.9c0-1.6,0.4-2.9,1.2-4.1c0.8-1.2,2-2,3.7-2.7s3.8-0.9,6.4-0.9h6V81h-4.8 c-1.4,0-2.5,0.2-3,0.7c-0.6,0.4-0.9,1.1-0.9,1.9c0,0.8,0.3,1.4,0.9,1.9c0.6,0.5,1.4,0.7,2.4,0.7s1.9-0.2,2.7-0.7s1.4-1.2,1.7-2.2 l1.2,3.3c-0.5,1.8-1.4,3.1-2.7,4C69.6,91.2,67.8,91.7,65.6,91.7z M73.1,91.3v-4.7l-0.6-1.2v-8.7c0-1.4-0.4-2.5-1.3-3.3 c-0.9-0.8-2.2-1.2-4.1-1.2c-1.2,0-2.5,0.2-3.7,0.6c-1.3,0.4-2.3,0.9-3.2,1.6l-3-6c1.4-0.9,3.2-1.7,5.2-2.2s4-0.8,6-0.8 c4.1,0,7.3,1,9.6,2.9s3.4,4.9,3.4,8.9v14.1L73.1,91.3L73.1,91.3z"></path>
-                            <linearGradient id="SVGID_00000146482673504337438010000011735315892952561542_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="458.04" x2="305.1426" y2="458.04" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                                <stop offset="0" style="stop-color:#0087B1"></stop>
-                                <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                                <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                                <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                                <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                                <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                                <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                                <stop offset="1" style="stop-color:#E60768"></stop>
-                            </linearGradient>
-                            <path style="fill:url(#SVGID_00000146482673504337438010000011735315892952561542_);" d="M98.5,91.7c-2.3,0-4.4-0.5-6.3-1.6 c-1.9-1.1-3.4-2.6-4.5-4.6s-1.7-4.3-1.7-7s0.6-5.1,1.7-7c1.1-2,2.6-3.5,4.5-4.6s4-1.6,6.3-1.6c2.2,0,4,0.5,5.5,1.4 c1.5,1,2.7,2.4,3.5,4.3c0.8,1.9,1.2,4.4,1.2,7.4s-0.4,5.5-1.1,7.4c-0.7,1.9-1.9,3.4-3.4,4.3C102.7,91.2,100.8,91.7,98.5,91.7z M100.4,84.6c1,0,1.9-0.2,2.7-0.7s1.4-1.2,1.9-2.1c0.5-0.9,0.7-2,0.7-3.3s-0.2-2.5-0.7-3.3c-0.5-0.9-1.1-1.6-1.9-2 c-0.8-0.5-1.7-0.7-2.7-0.7s-2,0.2-2.7,0.7c-0.8,0.5-1.4,1.1-1.9,2s-0.7,2-0.7,3.3s0.2,2.3,0.7,3.3c0.5,0.9,1.1,1.6,1.9,2.1 C98.4,84.3,99.3,84.6,100.4,84.6z M106,91.3v-4.4v-8.4l-0.5-8.4V56.4h8.9v34.9L106,91.3L106,91.3z"></path>
-                            <linearGradient id="SVGID_00000030482722453531590440000007783435225294493575_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="453.54" x2="305.1426" y2="453.54" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                                <stop offset="0" style="stop-color:#0087B1"></stop>
-                                <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                                <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                                <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                                <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                                <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                                <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                                <stop offset="1" style="stop-color:#E60768"></stop>
-                            </linearGradient>
-                            <path style="fill:url(#SVGID_00000030482722453531590440000007783435225294493575_);" d="M133.6,91.7c-3,0-5.7-0.6-7.9-1.7 c-2.2-1.1-4-2.7-5.2-4.7s-1.9-4.2-1.9-6.7c0-2.6,0.6-4.8,1.8-6.8s2.9-3.5,5-4.7c2.1-1.1,4.5-1.7,7.2-1.7c2.5,0,4.8,0.5,6.8,1.6 c2.1,1.1,3.7,2.6,4.9,4.5c1.2,2,1.9,4.3,1.9,7.2c0,0.3,0,0.7,0,1.1c0,0.4-0.1,0.8-0.1,1.1h-20.2v-4.8h15.4l-3.4,1.3 c0-1.1-0.2-2.1-0.6-3c-0.5-0.9-1.1-1.5-1.9-2c-0.8-0.5-1.7-0.7-2.8-0.7s-2.1,0.2-2.9,0.7c-0.8,0.5-1.4,1.1-1.9,2 c-0.4,0.9-0.6,1.9-0.6,3v1.4c0,1.3,0.3,2.3,0.8,3.2s1.3,1.6,2.2,2.1c1,0.5,2.1,0.7,3.5,0.7c1.3,0,2.4-0.2,3.2-0.5 c0.9-0.4,1.8-0.9,2.6-1.7l4.7,4.9c-1.2,1.3-2.7,2.3-4.5,3C138.1,91.3,136,91.7,133.6,91.7z"></path>
-                            <linearGradient id="SVGID_00000053519772474162988480000009149127365295282362_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="453.69" x2="305.1426" y2="453.69" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                                <stop offset="0" style="stop-color:#0087B1"></stop>
-                                <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                                <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                                <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                                <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                                <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                                <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                                <stop offset="1" style="stop-color:#E60768"></stop>
-                            </linearGradient>
-                            <path style="fill:url(#SVGID_00000053519772474162988480000009149127365295282362_);" d="M150.4,91.3V65.8h8.6v7.5l-1.3-2.1 c0.8-1.9,2-3.4,3.7-4.3c1.7-1,3.7-1.5,6.1-1.5v8.1c-0.4-0.1-0.8-0.1-1.1-0.1c-0.3,0-0.6,0-0.9,0c-1.8,0-3.3,0.5-4.4,1.5 c-1.1,1-1.7,2.6-1.7,4.8v11.7L150.4,91.3L150.4,91.3z"></path>
-                            <linearGradient id="SVGID_00000162348505512628008710000007363380337533822655_" gradientUnits="userSpaceOnUse" x1="-2.539825e-02" y1="453.54" x2="305.1426" y2="453.54" gradientTransform="matrix(1 0 0 -1 0 532.09)">
-                                <stop offset="0" style="stop-color:#0087B1"></stop>
-                                <stop offset="8.675033e-02" style="stop-color:#1F76A7"></stop>
-                                <stop offset="0.271" style="stop-color:#5B5594"></stop>
-                                <stop offset="0.4486" style="stop-color:#8C3984"></stop>
-                                <stop offset="0.6147" style="stop-color:#B32378"></stop>
-                                <stop offset="0.7668" style="stop-color:#CF146F"></stop>
-                                <stop offset="0.9001" style="stop-color:#E00A6A"></stop>
-                                <stop offset="1" style="stop-color:#E60768"></stop>
-                            </linearGradient>
-                            <path style="fill:url(#SVGID_00000162348505512628008710000007363380337533822655_);" d="M180.5,91.7c-2.2,0-4.3-0.3-6.3-0.8 c-2.1-0.5-3.7-1.1-5-1.9l2.6-6.1c1.2,0.7,2.6,1.3,4.2,1.7s3.2,0.7,4.7,0.7s2.5-0.2,3.1-0.5s0.9-0.8,0.9-1.3s-0.3-0.8-0.8-1.1 s-1.3-0.4-2.2-0.5c-0.9-0.1-1.9-0.2-2.9-0.4c-1.1-0.1-2.1-0.4-3.2-0.7s-2.1-0.7-3-1.2s-1.6-1.3-2.1-2.2s-0.8-2.1-0.8-3.6 c0-1.6,0.5-3.1,1.4-4.3c1-1.3,2.4-2.3,4.2-3s4.1-1.1,6.8-1.1c1.8,0,3.6,0.2,5.4,0.6s3.4,0.9,4.6,1.6l-2.7,6.1 c-1.3-0.8-2.5-1.3-3.8-1.5c-1.3-0.3-2.4-0.4-3.5-0.4c-1.5,0-2.6,0.2-3.2,0.5s-1,0.7-1,1.2s0.3,0.9,0.8,1.2s1.3,0.5,2.2,0.6 c0.9,0.1,1.9,0.3,2.9,0.4s2.2,0.4,3.2,0.6c1.1,0.3,2,0.7,2.9,1.2s1.6,1.3,2.1,2.2s0.8,2.1,0.8,3.6s-0.5,2.9-1.4,4.2 s-2.4,2.3-4.2,3S183.2,91.7,180.5,91.7z"></path>
-                        </g>
+                        <path style="fill:url(#gL7);" d="M180.5,91.7c-2.2,0-4.3-0.3-6.3-0.8 c-2.1-0.5-3.7-1.1-5-1.9l2.6-6.1c1.2,0.7,2.6,1.3,4.2,1.7s3.2,0.7,4.7,0.7s2.5-0.2,3.1-0.5s0.9-0.8,0.9-1.3s-0.3-0.8-0.8-1.1 s-1.3-0.4-2.2-0.5c-0.9-0.1-1.9-0.2-2.9-0.4c-1.1-0.1-2.1-0.4-3.2-0.7s-2.1-0.7-3-1.2s-1.6-1.3-2.1-2.2s-0.8-2.1-0.8-3.6 c0-1.6,0.5-3.1,1.4-4.3c1-1.3,2.4-2.3,4.2-3s4.1-1.1,6.8-1.1c1.8,0,3.6,0.2,5.4,0.6s3.4,0.9,4.6,1.6l-2.7,6.1 c-1.3-0.8-2.5-1.3-3.8-1.5c-1.3-0.3-2.4-0.4-3.5-0.4c-1.5,0-2.6,0.2-3.2,0.5s-1,0.7-1,1.2s0.3,0.9,0.8,1.2s1.3,0.5,2.2,0.6 c0.9,0.1,1.9,0.3,2.9,0.4s2.2,0.4,3.2,0.6c1.1,0.3,2,0.7,2.9,1.2s1.6,1.3,2.1,2.2s0.8,2.1,0.8,3.6s-0.5,2.9-1.4,4.2 s-2.4,2.3-4.2,3S183.2,91.7,180.5,91.7z"></path>
                     </g>
-                </g>
+                </g></g>
             </svg>
         </div>
 
-        <!-- Contenedor Principal (Efecto Cristal) -->
+        <!-- Contenedor Principal -->
         <div class="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 w-full shadow-2xl shadow-black/50">
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 
-                <!-- Columna Izquierda: Entradas (5 de 12 cols) -->
+                <!-- COLUMNA IZQUIERDA: Inputs -->
                 <div class="lg:col-span-5 space-y-5">
-                    <h3 class="text-xs font-bold text-[#0287b1] uppercase tracking-widest border-b border-white/10 pb-2">Datos de Partida</h3>
+
+                    <!-- Sección: Datos del Cliente -->
+                    <h3 class="text-xs font-bold text-[#0287b1] uppercase tracking-widest border-b border-white/10 pb-2">Datos del Cliente</h3>
                     
-                    <!-- LTV Anual / Ticket Medio -->
                     <div>
-                        <label class="block text-xs font-medium text-slate-400 mb-1.5">LTV Anual (o Ticket de Venta) (€)</label>
-                        <div class="relative rounded-lg shadow-sm">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <span class="text-slate-500 text-sm">€</span>
+                        <label class="block text-xs font-medium text-slate-400 mb-1.5">Ticket Medio de Venta (€)</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><span class="text-slate-500 text-sm">€</span></div>
+                            <input type="number" id="ticket" value="2000" step="100" class="w-full pl-8 pr-3 py-2.5 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0287b1] text-sm font-semibold text-white" oninput="calc()">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1.5">Tasa de Cierre del Cliente (%)</label>
+                        <div class="relative">
+                            <input type="number" id="tasaCierre" value="20" min="1" max="100" class="w-full px-3 py-2.5 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0287b1] text-sm font-semibold text-white" oninput="calc()">
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"><span class="text-slate-500 text-sm">%</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Sección: Tu Servicio -->
+                    <h3 class="text-xs font-bold text-[#8a3b8f] uppercase tracking-widest border-b border-white/10 pb-2 pt-2">Tu Servicio</h3>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1.5">Tu Cuota Mensual (€)</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"><span class="text-slate-500 text-sm">€</span></div>
+                            <input type="number" id="inversion" value="850" step="50" class="w-full pl-8 pr-3 py-2.5 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0287b1] text-sm font-semibold text-white" oninput="calc()">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-medium text-slate-400 mb-1.5">Leads / mes</label>
+                            <input type="number" id="leads" value="200" min="1" class="w-full px-3 py-2.5 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0287b1] text-sm font-semibold text-white" oninput="calc()">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-slate-400 mb-1.5">Tasa Agendamiento (%)</label>
+                            <div class="relative">
+                                <input type="number" id="tasaAgend" value="8" min="1" max="100" class="w-full px-3 py-2.5 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0287b1] text-sm font-semibold text-white" oninput="calc()">
+                                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"><span class="text-slate-500 text-sm">%</span></div>
                             </div>
-                            <input type="number" id="ticket" value="2000" step="100" class="w-full pl-8 pr-3 py-2.5 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0287b1] focus:border-[#0287b1] text-sm font-semibold text-white" oninput="calcularEgl()">
                         </div>
                     </div>
 
-                    <!-- Tasa de Cierre -->
-                    <div>
-                        <label class="block text-xs font-medium text-slate-400 mb-1.5">Tasa de Cierre de Ventas (%)</label>
-                        <div class="relative rounded-lg shadow-sm">
-                            <input type="number" id="tasaCierre" value="20" min="1" max="100" class="w-full px-3 py-2.5 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0287b1] focus:border-[#0287b1] text-sm font-semibold text-white" oninput="calcularEgl()">
-                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                <span class="text-slate-500 text-sm">%</span>
-                            </div>
-                        </div>
+                    <!-- Llamadas calculadas (output, no input) -->
+                    <div class="bg-[#0287b1]/10 border border-[#0287b1]/30 rounded-lg px-4 py-3 flex justify-between items-center">
+                        <span class="text-xs font-semibold text-[#0287b1] uppercase tracking-wide">Llamadas agendadas / mes</span>
+                        <span class="text-lg font-black text-white" id="llamadasCalc">16</span>
                     </div>
 
-                    <!-- Botones Pre-ajustes de Inversión -->
-                    <div>
-                        <label class="block text-xs font-medium text-slate-400 mb-1.5">Estructura de Servicio</label>
-                        <div class="grid grid-cols-2 gap-2">
-                            <button onclick="setInversion(850)" class="px-3 py-2 text-xs font-semibold rounded-lg bg-[#0287b1]/10 text-[#0287b1] border border-[#0287b1]/30 hover:bg-[#0287b1]/20 transition-all">Opción B (850€/mes)</button>
-                            <button onclick="setInversion(833)" class="px-3 py-2 text-xs font-semibold rounded-lg bg-[#e60768]/10 text-[#e60768] border border-[#e60768]/30 hover:bg-[#e60768]/20 transition-all">Opción A (Anualizado)</button>
-                        </div>
-                    </div>
-
-                    <!-- Inversión Mensual Equivalente -->
-                    <div>
-                        <label class="block text-xs font-medium text-slate-400 mb-1.5">Inversión Mensual Evaluada (€)</label>
-                        <div class="relative rounded-lg shadow-sm">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <span class="text-slate-500 text-sm">€</span>
-                            </div>
-                            <input type="number" id="inversion" value="850" step="50" class="w-full pl-8 pr-3 py-2.5 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0287b1] focus:border-[#0287b1] text-sm font-semibold text-white" oninput="calcularEgl()">
-                        </div>
-                    </div>
-
-                    <!-- Llamadas Agendadas -->
-                    <div>
-                        <label class="block text-xs font-medium text-slate-400 mb-1.5">Llamadas Agendadas Estimadas al Mes</label>
-                        <input type="number" id="llamadas" value="15" min="1" class="w-full px-3 py-2.5 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0287b1] focus:border-[#0287b1] text-sm font-semibold text-white" oninput="calcularEgl()">
-                    </div>
                 </div>
 
-                <!-- Columna Derecha: Resultados y ROI (7 de 12 cols) -->
-                <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+                <!-- COLUMNA DERECHA: Resultados -->
+                <div class="lg:col-span-7 flex flex-col justify-between space-y-5">
                     
                     <div class="bg-white/[0.02] p-6 rounded-2xl border border-white/5 flex-grow flex flex-col justify-between">
                         <div>
-                            <h3 class="text-xs font-bold text-[#e60768] uppercase tracking-widest border-b border-white/10 pb-2 mb-6">Métricas de Rendimiento</h3>
+                            <h3 class="text-xs font-bold text-[#e60768] uppercase tracking-widest border-b border-white/10 pb-2 mb-5">Métricas de Rendimiento</h3>
                             
-                            <div class="space-y-4">
-                                <!-- Valor de cada llamada -->
+                            <div class="space-y-3">
                                 <div class="flex justify-between items-center py-1">
                                     <span class="text-sm text-slate-300">Valor real de cada llamada:</span>
-                                    <span class="text-base font-bold text-white" id="valorLlamada">0,00 €</span>
+                                    <span class="text-base font-bold text-white" id="valorLlamada">400,00 €</span>
                                 </div>
-
-                                <!-- Punto de Equilibrio -->
                                 <div class="flex justify-between items-center py-1">
-                                    <span class="text-sm text-slate-300">Llamadas para recuperar cuota:</span>
-                                    <span class="text-base font-bold text-white" id="breakeven">0,0 llamadas</span>
+                                    <span class="text-sm text-slate-300">Llamadas para cubrir cuota:</span>
+                                    <span class="text-base font-bold text-white" id="breakeven">2,1 llamadas</span>
                                 </div>
-
-                                <!-- Facturación Estimada -->
-                                <div class="flex justify-between items-center border-t border-white/10 pt-4">
-                                    <span class="text-sm text-slate-200 font-semibold">Facturación mensual proyectada:</span>
-                                    <span class="text-xl font-black text-white" id="facturacion">0,00 €</span>
+                                <div class="flex justify-between items-center border-t border-white/10 pt-3">
+                                    <span class="text-sm text-slate-200 font-semibold">Facturación proyectada / mes:</span>
+                                    <span class="text-xl font-black text-white" id="facturacion">6.400,00 €</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Indicador Gigante de ROI -->
-                        <div class="mt-8 pt-6 border-t border-white/10 text-center flex flex-col items-center justify-center">
-                            <span class="block text-[10px] text-slate-400 uppercase tracking-widest font-black mb-1">Multiplicador ROI Mensual</span>
-                            <div class="relative inline-block">
-                                <span class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-[#0287b1] to-[#e60768] drop-shadow-[0_0_15px_rgba(2,135,177,0.3)]" id="roi">
-                                    0,0x
-                                </span>
-                            </div>
+                        <!-- ROI -->
+                        <div class="mt-6 pt-5 border-t border-white/10 text-center">
+                            <span class="block text-[10px] text-slate-400 uppercase tracking-widest font-black mb-1">Multiplicador ROI</span>
+                            <span class="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-[#0287b1] to-[#e60768]" id="roi">7,5x</span>
                         </div>
                     </div>
 
-                    <!-- Aviso de Garantía (Estilo de la Landing) -->
-                    <div class="bg-gradient-to-r from-[#e60768]/10 to-transparent p-4 rounded-xl border border-[#e60768]/20">
-                        <span class="font-extrabold text-[#e60768] block text-xs tracking-wider uppercase mb-1">Garantía de Ingesta Comercial™</span>
-                        <p class="text-slate-300 text-[11px] leading-relaxed">
-                            Si las llamadas entregadas de forma efectiva no cubren contractualmente la cuota evaluada bajo tu tasa de cierre declarada (<span class="font-bold text-white inline-tasa">20%</span>), te reembolsamos la diferencia del servicio.
-                        </p>
+                    <!-- INDICADOR DE GARANTÍA -->
+                    <div id="garantiaBox" class="p-4 rounded-xl border transition-all duration-300">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-extrabold text-xs tracking-wider uppercase" id="garantiaTitle">Garantía de Ingesta Comercial™</span>
+                            <span class="text-xs font-black px-3 py-1 rounded-full" id="garantiaBadge">SEGURA</span>
+                        </div>
+                        <p class="text-[11px] leading-relaxed text-slate-300" id="garantiaTexto"></p>
+                        <div class="mt-3 bg-black/20 rounded-lg p-3 grid grid-cols-3 gap-2 text-center">
+                            <div>
+                                <div class="text-[10px] text-slate-400 uppercase tracking-wide">Margen</div>
+                                <div class="text-sm font-black text-white" id="margenGarantia">+653%</div>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-slate-400 uppercase tracking-wide">Excedente</div>
+                                <div class="text-sm font-black text-white" id="excedenteGarantia">5.550 €</div>
+                            </div>
+                            <div>
+                                <div class="text-[10px] text-slate-400 uppercase tracking-wide">Ventas cubiertas</div>
+                                <div class="text-sm font-black text-white" id="ventasCubiertas">3,2</div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
 
             </div>
-
         </div>
 
         <div class="mt-6 text-[10px] text-slate-500 tracking-wide">
             Ever Growth Leaders © — Sistema de Ingesta Comercial™
         </div>
-
     </div>
 
     <script>
-        function calcularEgl() {
-            // Entradas
-            const ticket = parseFloat(document.getElementById('ticket').value) || 0;
-            const tasaCierre = (parseFloat(document.getElementById('tasaCierre').value) || 0) / 100;
-            const inversion = parseFloat(document.getElementById('inversion').value) || 0;
-            const llamadas = parseFloat(document.getElementById('llamadas').value) || 0;
+        function calc() {
+            const ticket    = parseFloat(document.getElementById('ticket').value)     || 0;
+            const cierre    = (parseFloat(document.getElementById('tasaCierre').value) || 0) / 100;
+            const inversion = parseFloat(document.getElementById('inversion').value)  || 0;
+            const leads     = parseFloat(document.getElementById('leads').value)       || 0;
+            const agend     = (parseFloat(document.getElementById('tasaAgend').value)  || 0) / 100;
 
-            // Fórmulas
-            const valorLlamada = ticket * tasaCierre;
-            const breakeven = valorLlamada > 0 ? (inversion / valorLlamada) : 0;
-            const facturacion = llamadas * valorLlamada;
-            const roi = inversion > 0 ? (facturacion / inversion) : 0;
+            // Cálculos principales
+            const llamadas      = Math.round(leads * agend);
+            const valorLlamada  = ticket * cierre;
+            const breakeven     = valorLlamada > 0 ? inversion / valorLlamada : 0;
+            const facturacion   = llamadas * valorLlamada;
+            const roi           = inversion > 0 ? facturacion / inversion : 0;
 
-            // Formatear resultados en UI
-            document.getElementById('valorLlamada').innerText = valorLlamada.toLocaleString('es-ES', { style: 'currency', currency: 'EUR' });
-            document.getElementById('breakeven').innerText = breakeven.toFixed(1) + ' llamadas';
-            document.getElementById('facturacion').innerText = facturacion.toLocaleString('es-ES', { style: 'currency', currency: 'EUR' });
-            document.getElementById('roi').innerText = roi.toFixed(1) + 'x';
-            
-            // Actualizar la tasa en el texto de garantía dinámicamente
-            const tasaTexto = document.querySelectorAll('.inline-tasa');
-            tasaTexto.forEach(el => el.innerText = (tasaCierre * 100).toFixed(0) + '%');
+            // Garantía
+            const excedente     = facturacion - inversion;
+            const margen        = inversion > 0 ? (excedente / inversion) * 100 : 0;
+            const ventasEquiv   = valorLlamada > 0 ? facturacion / ticket : 0;
+
+            // Renderizar resultados
+            document.getElementById('llamadasCalc').innerText   = llamadas;
+            document.getElementById('valorLlamada').innerText   = valorLlamada.toLocaleString('es-ES', {style:'currency', currency:'EUR'});
+            document.getElementById('breakeven').innerText      = breakeven.toFixed(1) + ' llamadas';
+            document.getElementById('facturacion').innerText    = facturacion.toLocaleString('es-ES', {style:'currency', currency:'EUR'});
+            document.getElementById('roi').innerText            = roi.toFixed(1) + 'x';
+
+            // Garantía — datos
+            document.getElementById('margenGarantia').innerText    = (margen >= 0 ? '+' : '') + margen.toFixed(0) + '%';
+            document.getElementById('excedenteGarantia').innerText = excedente.toLocaleString('es-ES', {style:'currency', currency:'EUR', maximumFractionDigits:0});
+            document.getElementById('ventasCubiertas').innerText   = ventasEquiv.toFixed(1);
+
+            // Garantía — semáforo
+            const box   = document.getElementById('garantiaBox');
+            const badge = document.getElementById('garantiaBadge');
+            const title = document.getElementById('garantiaTitle');
+            const texto = document.getElementById('garantiaTexto');
+
+            const cierreDisplay = (cierre * 100).toFixed(0);
+
+            // Limpiar clases
+            box.className = 'p-4 rounded-xl border transition-all duration-300';
+            badge.className = 'text-xs font-black px-3 py-1 rounded-full';
+
+            if (margen >= 100) {
+                // VERDE: muy segura
+                box.classList.add('bg-green-500/10', 'border-green-500/30', 'glow-green');
+                badge.classList.add('bg-green-500/20', 'text-green-400');
+                badge.innerText = '✓ SEGURA';
+                title.className = 'font-extrabold text-xs tracking-wider uppercase text-green-400';
+                texto.innerHTML = `Con <strong class="text-white">${llamadas} llamadas</strong> y su tasa de cierre del <strong class="text-white">${cierreDisplay}%</strong>, el cliente genera <strong class="text-white">${facturacion.toLocaleString('es-ES', {style:'currency', currency:'EUR', maximumFractionDigits:0})}</strong>. Tu cuota de <strong class="text-white">${inversion.toLocaleString('es-ES', {style:'currency', currency:'EUR', maximumFractionDigits:0})}</strong> se cubre con <strong class="text-white">${breakeven.toFixed(1)} llamadas</strong>. Ofrécela sin riesgo.`;
+            } else if (margen >= 0) {
+                // AMARILLO: ajustada
+                box.classList.add('bg-yellow-500/10', 'border-yellow-500/30', 'glow-yellow');
+                badge.classList.add('bg-yellow-500/20', 'text-yellow-400');
+                badge.innerText = '⚠ AJUSTADA';
+                title.className = 'font-extrabold text-xs tracking-wider uppercase text-yellow-400';
+                texto.innerHTML = `Cubres la cuota pero el margen es bajo (<strong class="text-white">${margen.toFixed(0)}%</strong>). Si el cliente cierra menos del <strong class="text-white">${cierreDisplay}%</strong> declarado, pierdes. Valora si compensa el riesgo.`;
+            } else {
+                // ROJO: no ofrecer
+                box.classList.add('bg-red-500/10', 'border-red-500/30', 'glow-red');
+                badge.classList.add('bg-red-500/20', 'text-red-400');
+                badge.innerText = '✗ NO OFRECER';
+                title.className = 'font-extrabold text-xs tracking-wider uppercase text-red-400';
+                texto.innerHTML = `Con estos números <strong class="text-white">no cubres tu cuota</strong>. Necesitas mínimo <strong class="text-white">${breakeven.toFixed(1)} llamadas</strong> para breakeven y solo generas <strong class="text-white">${llamadas}</strong>. No ofrezcas garantía.`;
+            }
         }
 
-        // Preset de botones de inversión
-        function setInversion(valor) {
-            document.getElementById('inversion').value = valor;
-            calcularEgl();
-        }
-
-        // Ejecutar primer cálculo automático al abrir la página
-        window.onload = calcularEgl;
+        window.onload = calc;
     </script>
 </body>
 </html>
