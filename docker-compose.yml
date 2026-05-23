@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  calculadora:
+    build: .
+    container_name: egl-calculadora-ventas
+    ports:
+      - "80:80"
+    restart: always
