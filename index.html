@@ -257,16 +257,19 @@
             const lblUnico = document.getElementById('lblPagoUnico');
             const labelInversion = document.getElementById('labelInversion');
             const equivBox = document.getElementById('equivBox');
+            const inputInversion = document.getElementById('inversion');
             
             if (tipo === 'mensual') {
                 lblMensual.className = "flex-1 text-center py-1.5 rounded-md text-xs font-bold uppercase tracking-wider cursor-pointer transition-all duration-200 bg-[#8a3b8f]/20 border border-[#8a3b8f]/40 text-[#dca3e3]";
                 lblUnico.className = "flex-1 text-center py-1.5 rounded-md text-xs font-bold uppercase tracking-wider cursor-pointer transition-all duration-200 text-slate-400 hover:text-white border border-transparent";
                 labelInversion.innerText = "Tu Cuota Mensual (€)";
+                inputInversion.value = "850";
                 equivBox.classList.add('hidden');
             } else {
                 lblUnico.className = "flex-1 text-center py-1.5 rounded-md text-xs font-bold uppercase tracking-wider cursor-pointer transition-all duration-200 bg-[#8a3b8f]/20 border border-[#8a3b8f]/40 text-[#dca3e3]";
                 lblMensual.className = "flex-1 text-center py-1.5 rounded-md text-xs font-bold uppercase tracking-wider cursor-pointer transition-all duration-200 text-slate-400 hover:text-white border border-transparent";
                 labelInversion.innerText = "Pago Único Anual (€)";
+                inputInversion.value = "10000";
                 equivBox.classList.remove('hidden');
             }
             calc();
